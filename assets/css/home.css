@@ -1,3 +1,23 @@
+.owl-carousel .carousel-item {
+  padding: 23.5vw 0;
+  background-size: cover;
+  background-position: center; }
+
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none; }
+  .owl-carousel .owl-nav button.owl-prev i, .owl-carousel .owl-nav button.owl-next i {
+    color: #263238;
+    font-size: 1.5rem; }
+
+.owl-carousel .owl-nav .owl-prev {
+  left: 10px; }
+
+.owl-carousel .owl-nav .owl-next {
+  right: 10px; }
+
 .main-carousel {
   margin-top: 76px; }
 
