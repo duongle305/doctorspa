@@ -1,0 +1,85 @@
+@import "layouts/variables";
+
+.btn {
+    &.btn-primary {
+        outline: none;
+        border: 2px solid $second;
+        box-shadow: none;
+        padding: 0.375rem 0.7rem;
+        background-color: transparent;
+        color: #CC9A48;
+        line-height: 1.5;
+
+        &.more {
+            width: 120px;
+            height: 40px;
+            position: relative;
+
+            > span {
+                position: absolute;
+                width: 100%;
+                white-space: nowrap;
+                left: 50%;
+                top: 50%;
+                transition: left 0.3s;
+                transform: translate(-50%, -50%);
+            }
+
+
+            > i {
+                position: absolute;
+                right: 12%;
+                top: 50%;
+                transform: translateY(-50%);
+                visibility: hidden;
+                font-size: 0.7rem;
+                font-weight: 600;
+                transition: visibility 0.1s;
+            }
+
+            &:hover {
+
+                > span {
+                    left: 42%;
+                    top: 50%;
+                }
+
+                > i {
+                    visibility: visible;
+                }
+            }
+        }
+
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:hover {
+            > i {
+                visibility: visible;
+            }
+
+            color: white;
+            background-color: $second;
+        }
+    }
+}
+
+/* section about */
+
+.section {
+    padding: 30px 0;
+    position: relative;
+    min-height: auto;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    .section-title {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 1.65rem;
+    }
+}
