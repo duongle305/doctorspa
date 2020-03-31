@@ -1,21 +1,10 @@
 $(document).ready(() => {
-    $(".main-carousel").owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        dots: false,
-        nav: true,
-        navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]
+    $('.hamburger').click(function () {
+        $(this).toggleClass('is-active');
+        $('.sidebar').toggleClass('show');
     });
-    $(".about-carousel").owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        nav: true,
-        navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]
-    });
+    $('.overlay').click(() => {
+        $('.hamburger').removeClass('is-active');
+        $('.sidebar').removeClass('show');
+    })
 });
