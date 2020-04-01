@@ -8,6 +8,10 @@ footer {
 
     .brand-info {
         display: flex;
+        @media (max-width: 568px) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .brand-footer {
             width: 150px;
@@ -25,6 +29,10 @@ footer {
             font-size: 0.95rem;
             padding: 10px 0 20px;
             color: white;
+            @media (max-width: 568px) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
         }
     }
 
@@ -34,6 +42,10 @@ footer {
         font-size: 1.25rem;
         font-weight: 400;
         text-transform: uppercase;
+        @media (max-width: 991px) {
+            max-width: 100%;
+            text-align: center;
+        }
     }
 
     .is-divider {
@@ -43,15 +55,29 @@ footer {
         width: 100%;
         margin: 1em 0 1em;
         max-width: 30px;
+        @media (max-width: 991px) {
+            display: none
+        }
+    }
+
+    .footer-socials {
+        @media (max-width: 991px) {
+            margin-top: 30px;
+        }
     }
 
     .contact {
+
         .socials {
             list-style: none;
             display: flex;
+            @media (max-width: 991px) {
+                justify-content: center;
+            }
 
             .social-item {
                 margin-right: 15px;
+
                 a {
                     text-decoration: none;
                     color: white;
@@ -65,5 +91,11 @@ footer {
                 font-size: 1.8rem;
             }
         }
+    }
+
+    .fb-page {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
     }
 }
