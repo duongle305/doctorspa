@@ -1,0 +1,123 @@
+@import "layouts/variables";
+@import "home/posts";
+
+.slider_show {
+    .slider_img {
+        width: 100%;
+    }
+}
+
+.section-wrapper {
+    .title {
+        font-size: 1.25rem;
+        padding-bottom: 7.5px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        color: $dark;
+        border-bottom: 2px solid $primary;
+    }
+}
+
+
+.posts {
+    &.main-posts {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto auto;
+        @media (max-width: 568px) {
+            grid-template-columns: auto;
+        }
+
+        .post-item {
+            max-width: 100%;
+            padding-bottom: 0;
+
+            .post-wrapper {
+                @media (max-width: 1200px) {
+                    flex-direction: column;
+                }
+
+                .box-image {
+                    max-width: 380px;
+                    max-height: 200px;
+                    @media (max-width: 1200px) {
+                        max-width: 100%;
+                        max-height: 240px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            &:last-child {
+                @media (max-width: 1200px) {
+                    display: none;
+                }
+            }
+
+            &:first-child {
+                @media (max-width: 1200px) {
+                    grid-row: 1;
+                }
+                @media (min-width: 1200px) {
+                    grid-row: 1 / span 2;
+                }
+
+                .post-wrapper {
+                    flex-flow: column;
+
+                    .box-image {
+                        max-width: 100%;
+                        max-height: 290px;
+                        margin-bottom: 10px;
+                        @media (max-width: 1200px) {
+                            max-height: 240px;
+                        }
+                    }
+                }
+
+                @media (max-width: 991px) {
+                    grid-row: 1;
+                }
+            }
+        }
+    }
+}
+
+.posts {
+    &.videos {
+        display: flex;
+        flex-wrap: wrap;
+
+        .post-item {
+            flex-basis: 50%;
+            max-width: 50%;
+            padding-right: 10px;
+
+            &:nth-child(even) {
+                padding-right: 0;
+            }
+
+            @media (max-width: 991px) {
+                flex-basis: 100%;
+                max-width: 100%;
+                padding-right: 0;
+            }
+
+            .box-image {
+                &.video {
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        color: white;
+                        font-size: 2.5rem;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+            }
+        }
+    }
+}
