@@ -1,10 +1,17 @@
 $(document).ready(() => {
-    $('.hamburger').click(function () {
-        $(this).toggleClass('is-active');
-        $('.sidebar').toggleClass('show');
+    let btnToggle = $('.hamburger'), sideBar = $('.sidebar'), overlaySideBar = $('.overlay');
+    btnToggle.click(() => {
+        btnToggle.toggleClass('is-active');
+        sideBar.toggleClass('show');
     });
-    $('.overlay').click(() => {
-        $('.hamburger').removeClass('is-active');
-        $('.sidebar').removeClass('show');
-    })
+    overlaySideBar.click(() => {
+        btnToggle.removeClass('is-active');
+        sideBar.removeClass('show');
+    });
+    $(window).resize(function () {
+        if ($(this).width() >= 991) {
+            sideBar.removeClass('show');
+            btnToggle.removeClass('is-active')
+        }
+    });
 });
