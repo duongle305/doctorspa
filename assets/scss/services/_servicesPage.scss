@@ -1,7 +1,7 @@
+@import "../layouts/variables";
+
 .service {
     .slider_show {
-        top: 45px;
-
         .slider_img {
             width: 100%;
         }
@@ -43,6 +43,9 @@
 
                 img {
                     height: auto;
+                    max-height: 270px;
+                    object-fit: cover;
+                    object-position: center;
                 }
 
                 .title_image {
@@ -53,7 +56,7 @@
                     text-align: center;
                     color: #ffffff;
                     padding: 10px 0;
-                    background-color: rgb(26, 33, 103);
+                    background-color: $second-dark;
                 }
             }
 
