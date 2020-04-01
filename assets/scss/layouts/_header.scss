@@ -17,6 +17,9 @@
             display: none;
             outline: none;
             color: $primary;
+            @media (min-width: 320px) {
+                padding: 0;
+            }
             @media (max-width: 991px) {
                 display: initial;
             }

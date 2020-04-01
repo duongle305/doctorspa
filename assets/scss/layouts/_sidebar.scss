@@ -12,7 +12,7 @@ $hamburger-layer-color: #000 !default;
     z-index: 8;
     min-width: 250px;
     height: 100vh;
-    background-color: $second;
+    background-color: $second-dark;
     padding-top: 76px;
 
     &.show {
@@ -25,11 +25,13 @@ $hamburger-layer-color: #000 !default;
 
     .navbar-nav {
         z-index: 99;
+        padding: 20px 0;
 
         .nav-item {
             .nav-link {
                 padding-left: 15px;
-                color: $dark;
+                color: white;
+                text-transform: uppercase;
             }
         }
     }
