@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="assets/plugins/owl/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/home.css">
-<!--    <script async defer crossorigin="anonymous"-->
-<!--            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=302810217173292&autoLogAppEvents=1"></script>-->
+    <!--    <script async defer crossorigin="anonymous"-->
+    <!--            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=302810217173292&autoLogAppEvents=1"></script>-->
     <title>Document</title>
 </head>
 <body>
@@ -30,24 +30,48 @@
             </span>
             </button>
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                <ul class="nav ml-auto">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Về chúng tôi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Chi nhánh</a>
                     </li>
-                    <li class="nav-item with-sub">
+                    <li class="nav-item">
                         <a class="nav-link" href="services.html">
                             Dịch vụ
                             <i class="las la-angle-down"></i>
                         </a>
-                        <ul class="navbar-nav">
+                        <ul class="sub-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="">Giải thưởng</a>
+                                <a class="nav-link" href="">
+                                    <span>Giải thưởng</span>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Điều trị nám</a>
+                                <a class="nav-link" href="">
+                                    <span>Điều trị nám</span>
+                                    <i class="las la-angle-down"></i>
+                                </a>
+                                <ul class="sub-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">
+                                            <span>Giải thưởng</span>
+                                            <i class="las la-angle-down"></i>
+                                        </a>
+                                        <ul class="sub-nav">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Giải thưởng</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Điều trị nám</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">Điều trị nám</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="">Trị mụn</a>
@@ -66,21 +90,64 @@
         </div>
     </header>
     <nav class="sidebar">
-        <div class="overlay"></div>
         <div class="sidebar-wrapper">
-            <ul class="navbar-nav">
+            <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="">
-                        Về chúng tôi
-                    </a>
+                    <a class="nav-link" href="#">Về chúng tôi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">
-                        Về chúng tôi
+                    <a class="nav-link" href="#">Chi nhánh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">
+                        <span>Dịch vụ</span>
+                        <i class="las la-angle-down"></i>
                     </a>
+                    <ul class="sub-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span>Giải thưởng</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span>Điều trị nám</span>
+                                <i class="las la-angle-down"></i>
+                            </a>
+                            <ul class="sub-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <span>Giải thưởng</span>
+                                        <i class="las la-angle-down"></i>
+                                    </a>
+                                    <ul class="sub-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="">Điều trị nám nám nám</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="">Điều trị nám</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Điều trị nám</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Trị mụn</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="promotions.html">Khuyến mãi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
                 </li>
             </ul>
         </div>
+        <div class="overlay"></div>
     </nav>
     <main>
         <div class="main-carousel owl-carousel owl-drag owl-theme">
