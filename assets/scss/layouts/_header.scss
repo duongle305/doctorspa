@@ -25,58 +25,76 @@
             }
         }
 
-        .navbar-nav {
+        .nav {
             @media screen and (max-width: 991px) {
                 display: none;
             }
 
             .nav-item {
-                &.with-sub {
-                    position: relative;
-
-                    &:hover {
-                        > .navbar-nav {
-                            visibility: visible;
-                            opacity: 1;
-                        }
+                &:hover {
+                    .sub-nav {
+                        visibility: visible;
                     }
+                }
 
-                    > .navbar-nav {
-                        position: absolute;
-                        z-index: 9;
-                        transition: opacity, visibility .5s;
-                        visibility: hidden;
-                        opacity: 0;
-                        top: 100%;
-                        width: auto;
-                        min-width: 200px;
-                        max-width: 1150px;
-                        flex-direction: column;
-                        transform: translateY(15%);
-                        background-color: #fff;
-                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-                        padding: 0.2rem 0.8rem;
-                        border-top: 3px solid $second;
+                .sub-nav {
+                    position: absolute;
+                    background-color: white;
+                    top: 100%;
+                    min-width: 200px;
+                    list-style: none;
+                    visibility: hidden;
+                    transition: visibility .2s;
+                    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 
-                        > .nav-item {
+                    .nav-item {
+                        position: relative;
+
+                        .sub-nav {
+                            left: calc(100% + 20px);
+                            visibility: hidden;
+                            transition: visibility, left .2s;
+                            top: 0;
+                        }
+
+                        > .nav-link {
+                            > i {
+                                transition: transform .2s;
+                            }
+                        }
+
+                        &:hover {
+                            > .sub-nav {
+                                visibility: visible;
+                                left: 100%;
+                            }
+
                             > .nav-link {
-                                white-space: nowrap;
-
-                                &:before {
-                                    width: 3px;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    height: 50%;
-                                    left: 0;
+                                > i {
+                                    transform: rotate(-90deg);
                                 }
                             }
                         }
+
+                        .nav-link {
+                            border-left: 3px solid $second;
+                            display: flex;
+                            justify-content: space-between;
+
+                            &:before {
+                                display: none;
+                            }
+                        }
+
                     }
+
                 }
             }
 
+
             .nav-link {
                 color: $dark;
+                white-space: nowrap;
                 text-transform: uppercase;
                 font-weight: 600;
                 font-size: 0.9rem;
