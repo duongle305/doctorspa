@@ -40,9 +40,15 @@ body {
                         font-size: 1rem;
                         margin-right: 5px;
                     }
-                    span{
+
+                    span {
                         margin-right: 8px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
                     }
+
                     font-size: .8rem;
                     color: $dark-700;
                     font-weight: 300;
