@@ -1,0 +1,83 @@
+@import "layouts/variables";
+
+body {
+    background: $bg-main;
+}
+
+.post-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+    .post-container {
+        background-color: white;
+        padding: 20px 30px 30px;
+        @media (min-width: 991px) {
+            max-width: 73%;
+            flex-basis: 73%;
+        }
+
+        .post-header {
+            padding-bottom: 20px;
+
+            .post-header__title {
+                font-size: 1.7rem;
+                font-weight: 500;
+            }
+
+            .post-header__metas {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 2px solid $primary-1;
+                padding-bottom: 10px;
+
+                .metas__time {
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        color: $second;
+                        font-size: 1rem;
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        margin-right: 8px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                    font-size: .8rem;
+                    color: $dark-700;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 10px 0;
+        }
+
+        .wp-caption {
+            max-width: 100% !important;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+    }
+
+    .post-sidebar__right {
+        background-color: white;
+        margin-left: 2%;
+        padding: 20px;
+        @media (max-width: 991px) {
+            margin-left: 0;
+            margin-top: 2%;
+        }
+    }
+}
