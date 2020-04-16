@@ -1,14 +1,24 @@
+@import "variables";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 footer {
     background-color: $dark-100;
 
     &.section {
+        margin-top: auto;
         padding: 40px 0;
         display: block;
     }
 
     .brand-info {
         display: flex;
-        @media (max-width: 568px) {
+        @media (max-width: 991px) {
+            margin-top: 30px;
             flex-direction: column;
             align-items: center;
         }
@@ -17,6 +27,9 @@ footer {
             width: 150px;
             margin-right: 30px;
             flex-shrink: 0;
+            @media (max-width: 991px) {
+                margin-right: 0;
+            }
 
             img {
                 width: 100%;
@@ -24,10 +37,19 @@ footer {
             }
         }
 
+        .brand-title {
+            color: $bg-white;
+            text-transform: uppercase;
+            @include for-tablet{
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+
         .brand-desc {
             font-weight: 300;
             font-size: 0.95rem;
-            padding: 10px 0 20px;
+            padding: 5px 0 20px;
             color: white;
             @media (max-width: 568px) {
                 padding-left: 30px;
@@ -95,7 +117,10 @@ footer {
 
     .fb-page {
         display: flex;
-        justify-content: center;
         margin-top: 30px;
+
+        @media (max-width: 991px) {
+            justify-content: center;
+        }
     }
 }

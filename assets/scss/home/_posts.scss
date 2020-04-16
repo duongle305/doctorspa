@@ -2,7 +2,9 @@
 .posts {
     h3 {
         text-transform: uppercase;
-        border-left: 4px solid $dark;
+        border-bottom: 2px solid $primary;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
         line-height: 1;
         padding-left: 10px;
         display: flex;
@@ -67,7 +69,7 @@
                 padding-left: 10px;
 
                 .post-title {
-                    font-size: 0.9rem;
+                    font-size: 1.125rem;
                     text-overflow: ellipsis;
                     overflow: hidden;
                     display: -webkit-box;

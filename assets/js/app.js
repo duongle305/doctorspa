@@ -27,3 +27,12 @@ $(document).ready(() => {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    let time = 0;
+    time = setTimeout(function () {
+        $('body').addClass('hide-loader');
+        clearTimeout(time);
+    }, 1000);
+});
